@@ -22,3 +22,11 @@ function sum(arr) {
   }
   return total;
 }
+
+// TESTS:
+let test1 = range(1, 10);
+let test2 = range(5, 2, -1);
+let test3 = sum(test1);
+console.log(
+  `test1 should log 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; actual: ${test1}\ntest2 should log 5, 4, 3, 2; actual: ${test2}\ntest3 should log 55; actual: ${test3}`
+);
