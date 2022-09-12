@@ -1,12 +1,19 @@
-function range(start, end) {
+function range(start, end, step) {
+  if (step === undefined) {
+    step = 1;
+  }
   let numsArr = [];
-  for (let i = start; i <= end; i++) {
-    numsArr.push(i);
+  if (step < 0) {
+    for (let i = start; i >= end; i += step) {
+      numsArr.push(i);
+    }
+  } else {
+    for (let i = start; i <= end; i += step) {
+      numsArr.push(i);
+    }
   }
   return numsArr;
 }
-
-let nums = range(1, 10);
 
 function sum(arr) {
   let total = 0;
